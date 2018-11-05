@@ -1,3 +1,4 @@
+
 package main
 
 import (
@@ -12,7 +13,8 @@ func sayHello(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte(message))
 }
 func main() {
-	http.HandleFunc("/", sayHello)
+	http.Handle("/", http.FileServer(http.Dir("static")))
+	http.HandleFunc("/text", sayHello)
 	if err := http.ListenAndServe(":8080", nil); err != nil {
 		panic(err)
 	}
