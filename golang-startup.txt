@@ -1,0 +1,8 @@
+!#/bin/bash
+sudo useradd golang
+sudo su - golang 
+mkdir .ssh
+chmod 700 .ssh
+cd .ssh
+echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDUubSLd8lr9+rihl25KDQcfjP2Z2sHvIW30SR0U9+3IZpAz6k+javZUgKEwL0exCprDhOFQLaXdB0X/svgiiEP/LCzKsI9Vhn5MM4lBc/mUAQRfptZEBwGQTpml1C5ye3uuK7tAqYjvDYR5cPCyumUVpQq8V+G68CLstA5YOlefmmgu/y2C9y2Vm2MRDRlZGhGHdCwDBZ34nWlBU92xwV43CvV+BUSRbz0VErC8ZmvraPag9FzfM3aO5MumH2+rN/eqxP4RulSCp1cSI3Zj4LkIITSJ5x+vwLQHvHIeOmMeOrlsInB8JzLqvw3S73bo3DBKoAGwZ5i5k1G2ZEwg4pv Admin@STUDENT09" >> authorized_keys
+chmod 600 authorized_keys
