@@ -1,0 +1,10 @@
+[Unit]
+Description=GoLang
+
+[Service]
+User=golang
+WorkingDirectory=/opt/GoLang
+ExecStart=/opt/GoLang/main
+
+[Install]
+WantedBy=multi-user.target    
